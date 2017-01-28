@@ -168,6 +168,9 @@
         'include': '#primitive_field'
       }
       {
+        'include': '#map_field'
+      }
+      {
         'include': '#group_field'
       }
       {
@@ -287,6 +290,24 @@
         'include': '#comments'
       }
     ]
+  'map_field':
+    'captures':
+      '1':
+        'name': 'storage.type.built-in.protobuf'
+      '3':
+        'name': 'storage.type.built-in.protobuf'
+      '7':
+        'name': 'support.class.user-defined-type.protobuf'
+      '9':
+        'name': 'storage.type.built-in.protobuf'
+      '13':
+        'name': 'support.class.user-defined-type.protobuf'
+      '14':
+        'name': 'variable.other.map-field.protobuf'
+      '15':
+        'name': 'constant.numeric.field-tag.protobuf'
+    # TODO: Try to get the definition of a type inside a reusable block, so new primitive types can be added easily
+    'match': '(map)<\\s*((((s|u)?int|s?fixed)(32|64)|string|bytes|bool)|(\\S+)),\\s*((((s|u)?int|s?fixed)(32|64)|string|bytes|bool)|(\\S+))>\\s+(\\S+)\\s*=\\s*(\\d+)'
   'primitive_field':
     'captures':
       '1':
