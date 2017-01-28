@@ -15,6 +15,9 @@
   'field':
     'prefix': 'field'
     'body': '${1:optional} ${2:type} ${3:field_name} = ${4:0};$5'
+  'map':
+    'prefix': 'map'
+    'body': 'map<${1:keyType}, ${2:valueType}> ${3:field_name} = ${4:0};$5'
 '.meta.service-declaration.protobuf':
   'rpc ... (...) returns (...);':
     'prefix': 'rpc'
